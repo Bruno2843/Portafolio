@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bruno Iván Olmos Durán | Portafolio</title>
+  <title>Bruno Iván Olmos Durán | Portafolio Profesional</title>
 
   <style>
     * {
@@ -16,30 +16,31 @@
     body {
       background-color: #0e0e0e;
       color: #f5f5f5;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
-      background-color: #1a1a1a;
-      padding: 2.5rem;
+      background-color: #161616;
+      padding: 3rem 2rem;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       color: #00ffe0;
     }
 
     header p {
       font-size: 1.2rem;
       color: #ccc;
-      margin-top: .5rem;
+      margin-top: 0.7rem;
     }
 
     nav {
-      background: #121212;
+      background: #111;
       padding: 1rem;
       text-align: center;
+      border-bottom: 1px solid #222;
     }
 
     nav a {
@@ -50,31 +51,38 @@
     }
 
     section {
-      padding: 3rem 2rem;
-      max-width: 900px;
+      padding: 3.5rem 2rem;
+      max-width: 950px;
       margin: auto;
     }
 
     h2 {
       color: #00ffe0;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.8rem;
     }
 
     .proyecto {
-      background-color: #1c1c1c;
+      background-color: #1b1b1b;
       margin-bottom: 2rem;
-      padding: 1.5rem;
+      padding: 1.8rem;
       border-left: 4px solid #00ffe0;
     }
 
     .proyecto h3 {
-      margin-bottom: .5rem;
+      margin-bottom: 0.6rem;
+      color: #ffffff;
+    }
+
+    .proyecto span {
+      font-size: 0.9rem;
+      color: #aaa;
     }
 
     footer {
-      background-color: #202020;
+      background-color: #1a1a1a;
       text-align: center;
-      padding: 2.5rem;
+      padding: 3rem 2rem;
       margin-top: 3rem;
     }
 
@@ -89,7 +97,7 @@
 
   <header>
     <h1>Bruno Iván Olmos Durán</h1>
-    <p>Programador Web Junior | PHP • CodeIgniter 3 • MySQL</p>
+    <p>Programador Web Junior | PHP · CodeIgniter 3 · MySQL</p>
   </header>
 
   <nav>
@@ -101,33 +109,60 @@
   <section id="sobre-mi">
     <h2>Sobre mí</h2>
     <p>
-      Soy desarrollador web junior, estudiante del último año de la carrera
+      Soy desarrollador web junior y estudiante del último año de la carrera
       <strong>Técnico Superior en Desarrollo de Software</strong>.
-      Trabajo con <strong>PHP utilizando el framework CodeIgniter 3</strong>,
-      aplicando arquitectura MVC, manejo de bases de datos MySQL y desarrollo de
-      sistemas web funcionales y escalables.
+      Tengo experiencia en el desarrollo de sistemas web utilizando
+      <strong>PHP con el framework CodeIgniter 3</strong>, arquitectura MVC y
+      bases de datos MySQL.
+    </p>
+    <p>
+      Participé en prácticas profesionales desarrollando un
+      <strong>sistema hospitalario real</strong>, lo que me permitió aplicar
+      lógica de negocio, control de acceso por roles y buenas prácticas de desarrollo.
     </p>
   </section>
 
   <section id="proyectos">
-    <h2>Proyectos</h2>
+    <h2>Proyectos y Prácticas</h2>
+
+    <div class="proyecto">
+      <h3>Sistema Hospitalario – Gestión de Pacientes y Medicamentos</h3>
+      <span>Prácticas profesionales · CodeIgniter 3 · PHP · MySQL</span>
+      <p>
+        Desarrollo de un sistema web para entorno hospitalario y farmacia,
+        implementado con <strong>arquitectura MVC en CodeIgniter 3</strong>.
+      </p>
+      <p>
+        Funcionalidades principales:
+      </p>
+      <ul>
+        <li>Login de usuarios con validación segura y sesiones.</li>
+        <li>Gestión de usuarios con roles (Administrador / Operario).</li>
+        <li>CRUD completo de pacientes y medicamentos.</li>
+        <li>Registro de dispensación de medicamentos.</li>
+        <li>Ajuste y control de stock.</li>
+        <li>Búsquedas avanzadas y filtros.</li>
+        <li>Generación y exportación de reportes en Excel y Word.</li>
+      </ul>
+    </div>
 
     <div class="proyecto">
       <h3>Sistema de Carrito de Compras – Farmacia</h3>
+      <span>Proyecto académico · PHP · MySQL</span>
       <p>
-        Aplicación web desarrollada en <strong>PHP, MySQL, HTML y CSS</strong>.
-        Permite visualizar productos, agregar o eliminar del carrito y calcular
-        el total de la compra. Incluye validaciones y persistencia de datos.
+        Aplicación web que permite visualizar productos, agregar y eliminar
+        artículos del carrito y calcular el total de la compra.
+        Incluye persistencia de datos y validaciones.
       </p>
     </div>
 
     <div class="proyecto">
       <h3>Sistema de Inscripción a Mesas de Examen</h3>
+      <span>Proyecto académico · PHP · MySQL</span>
       <p>
-        Sistema web desarrollado con <strong>PHP y MySQL</strong>, utilizando
-        <strong>control de acceso por roles</strong> (Administrador y Operador).
-        Permite gestionar mesas de examen, materias e inscripciones mediante
-        operaciones CRUD completas.
+        Sistema web para la gestión de mesas de examen y materias,
+        con control de acceso por roles.
+        Implementación de operaciones CRUD completas para administradores.
       </p>
     </div>
 
@@ -136,12 +171,13 @@
   <footer id="contacto">
     <h2>Contacto</h2>
     <p>
+      📍 San Juan, Argentina <br>
       📞 264 602 9529 <br>
       📧 brunoolmos29@gmail.com <br>
-      📍 San Juan, Argentina <br>
       📸 Instagram: @bruno_olmos29
     </p>
   </footer>
 
 </body>
 </html>
+
