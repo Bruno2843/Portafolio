@@ -213,7 +213,7 @@ section {
 
 /* mobile menu */
 .nav-mobile {
-  display: none;
+  visibility: hidden;
   position: fixed;
   inset: 0;
   top: 60px;
@@ -227,10 +227,11 @@ section {
   z-index: 999;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .3s ease;
+  transition: opacity .3s ease, visibility .3s ease;
 }
 
 .nav-mobile.open {
+  visibility: visible;
   display: flex;
   opacity: 1;
   pointer-events: auto;
@@ -241,6 +242,7 @@ section {
   .nav-mobile,
   .nav-mobile.open {
     display: none !important;
+    visibility: hidden !important;
     pointer-events: none !important;
   }
 }
