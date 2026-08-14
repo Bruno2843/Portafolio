@@ -238,8 +238,10 @@ section {
 
 /* En desktop, el menú mobile nunca se muestra */
 @media (min-width: 769px) {
-  .nav-mobile {
+  .nav-mobile,
+  .nav-mobile.open {
     display: none !important;
+    pointer-events: none !important;
   }
 }
 
