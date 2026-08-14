@@ -3,182 +3,633 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bruno Iván Olmos Durán | Portafolio Profesional</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+  <!-- SEO -->
+  <title>Bruno Olmos | Desarrollador de Software</title>
+  <meta name="description" content="Bruno Iván Olmos Durán — Estudiante de Tecnicatura Superior en Desarrollo de Software, con experiencia práctica en el desarrollo de sistemas web, PHP, CodeIgniter, MySQL y arquitectura MVC. San Juan, Argentina.">
+  <meta name="keywords" content="Bruno Olmos, desarrollador web, PHP, CodeIgniter, MySQL, portfolio, San Juan Argentina, desarrollo de software">
+  <meta name="author" content="Bruno Iván Olmos Durán">
 
-    body {
-      background-color: #0e0e0e;
-      color: #f5f5f5;
-      line-height: 1.7;
-    }
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bruno Olmos | Desarrollador de Software">
+  <meta property="og:description" content="Estudiante de Desarrollo de Software con experiencia práctica en sistemas web reales. PHP · CodeIgniter · MySQL · MVC.">
+  <meta property="og:locale" content="es_AR">
 
-    header {
-      background-color: #161616;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
+  <!-- Favicon (emoji fallback) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 
-    header h1 {
-      font-size: 2.6rem;
-      color: #00ffe0;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-top: 0.7rem;
-    }
-
-    nav {
-      background: #111;
-      padding: 1rem;
-      text-align: center;
-      border-bottom: 1px solid #222;
-    }
-
-    nav a {
-      color: #00ffe0;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    section {
-      padding: 3.5rem 2rem;
-      max-width: 950px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #00ffe0;
-      margin-bottom: 1.2rem;
-      font-size: 1.8rem;
-    }
-
-    .proyecto {
-      background-color: #1b1b1b;
-      margin-bottom: 2rem;
-      padding: 1.8rem;
-      border-left: 4px solid #00ffe0;
-    }
-
-    .proyecto h3 {
-      margin-bottom: 0.6rem;
-      color: #ffffff;
-    }
-
-    .proyecto span {
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    footer {
-      background-color: #1a1a1a;
-      text-align: center;
-      padding: 3rem 2rem;
-      margin-top: 3rem;
-    }
-
-    footer p {
-      color: #ccc;
-      line-height: 1.8;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header>
-    <h1>Bruno Iván Olmos Durán</h1>
-    <p>Programador Web Junior | PHP · CodeIgniter 3 · MySQL</p>
-  </header>
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">Bruno<span>.</span></a>
 
-  <nav>
+      <ul class="nav-links" role="list">
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#tecnologias">Tecnologías</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="nav-mobile"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <nav id="nav-mobile" role="navigation" aria-label="Menú móvil" aria-hidden="true">
+    <a href="#hero">Inicio</a>
     <a href="#sobre-mi">Sobre mí</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#tecnologias">Tecnologías</a>
     <a href="#proyectos">Proyectos</a>
+    <a href="#educacion">Educación</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>
-      Soy desarrollador web junior y estudiante del último año de la carrera
-      <strong>Técnico Superior en Desarrollo de Software</strong>.
-      Tengo experiencia en el desarrollo de sistemas web utilizando
-      <strong>PHP con el framework CodeIgniter 3</strong>, arquitectura MVC y
-      bases de datos MySQL.
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <header id="hero" role="banner">
+    <div class="hero-badge">Disponible para oportunidades</div>
+
+    <h1 class="hero-name">
+      Bruno Iván<br><span>Olmos Durán</span>
+    </h1>
+
+    <p class="hero-title">
+      Estudiante de Desarrollo de Software ·
+      <strong><span id="typed-subtitle">Desarrollador Web Junior</span></strong>
     </p>
-    <p>
-      Participé en prácticas profesionales desarrollando un
-      <strong>sistema hospitalario real</strong>, lo que me permitió aplicar
-      lógica de negocio, control de acceso por roles y buenas prácticas de desarrollo.
+
+    <p class="hero-description">
+      Estudiante de Tecnicatura Superior en Desarrollo de Software, con experiencia
+      práctica en el desarrollo de sistemas web reales, gestión de bases de datos
+      y resolución de problemas mediante software. Actualmente realizando prácticas
+      profesionalizantes en una empresa de software.
     </p>
+
+    <div class="hero-buttons">
+      <a href="#proyectos" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        Ver proyectos
+      </a>
+      <a href="#contacto" class="btn btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Contactarme
+      </a>
+    </div>
+
+    <div class="hero-contact-links">
+      <a href="mailto:brunoolmos29@gmail.com" class="hero-contact-link" aria-label="Enviar email a Bruno Olmos">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 7L4 6h16l-8 5z"/></svg>
+        brunoolmos29@gmail.com
+      </a>
+      <a href="https://www.instagram.com/bruno_olmos29" target="_blank" rel="noopener noreferrer" class="hero-contact-link" aria-label="Instagram de Bruno Olmos">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        @bruno_olmos29
+      </a>
+      <a href="tel:+5492646029529" class="hero-contact-link" aria-label="Llamar a Bruno Olmos">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        264 602 9529
+      </a>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>scroll</span>
+      <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       SOBRE MÍ
+  ============================================================ -->
+  <section id="sobre-mi" aria-labelledby="sobre-mi-title">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-text reveal">
+          <h2 class="section-title" id="sobre-mi-title">Sobre <span>mí</span></h2>
+          <div class="section-divider" aria-hidden="true"></div>
+          <p class="section-subtitle">Quién soy y qué me mueve</p>
+
+          <p>
+            Soy estudiante del último año de la
+            <strong>Tecnicatura Superior en Desarrollo de Software</strong>,
+            con enfoque en el desarrollo de sistemas web orientados al backend,
+            bases de datos y resolución de problemas reales.
+          </p>
+          <p>
+            Actualmente realizo <strong>prácticas profesionalizantes</strong> en una empresa
+            de software, donde participé en el desarrollo de un sistema hospitalario real,
+            trabajando con lógica de negocio, control de acceso, gestión de datos y
+            generación de reportes.
+          </p>
+          <p>
+            Disfruto del proceso de convertir un problema concreto en una solución de software
+            funcional. Me interesa seguir creciendo profesionalmente, sumar experiencia práctica
+            y trabajar en equipo.
+          </p>
+
+          <div class="about-chips" aria-label="Áreas de interés">
+            <span class="chip">Backend</span>
+            <span class="chip">Bases de datos</span>
+            <span class="chip">Desarrollo web</span>
+            <span class="chip">Arquitectura MVC</span>
+            <span class="chip">Sistemas de gestión</span>
+          </div>
+        </div>
+
+        <div class="about-stats reveal reveal-delay-2" aria-label="Datos destacados">
+          <div class="stat-card">
+            <span class="stat-icon" aria-hidden="true">🎓</span>
+            <div class="stat-value">Último año</div>
+            <div class="stat-label">Tecnicatura en Desarrollo de Software</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon" aria-hidden="true">🏥</span>
+            <div class="stat-value">Prácticas reales</div>
+            <div class="stat-label">Sistema hospitalario en empresa de software</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon" aria-hidden="true">💻</span>
+            <div class="stat-value">3 proyectos</div>
+            <div class="stat-label">Web con PHP, MySQL y CodeIgniter</div>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon" aria-hidden="true">📍</span>
+            <div class="stat-value">San Juan</div>
+            <div class="stat-label">Argentina</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
-  <section id="proyectos">
-    <h2>Proyectos y Prácticas</h2>
 
-    <div class="proyecto">
-      <h3>Sistema Hospitalario – Gestión de Pacientes y Medicamentos</h3>
-      <span>Prácticas profesionales · CodeIgniter 3 · PHP · MySQL</span>
-      <p>
-        Desarrollo de un sistema web para entorno hospitalario y farmacia,
-        implementado con <strong>arquitectura MVC en CodeIgniter 3</strong>.
-      </p>
-      <p>
-        Funcionalidades principales:
-      </p>
-      <ul>
-        <li>Login de usuarios con validación segura y sesiones.</li>
-        <li>Gestión de usuarios con roles (Administrador / Operario).</li>
-        <li>CRUD completo de pacientes y medicamentos.</li>
-        <li>Registro de dispensación de medicamentos.</li>
-        <li>Ajuste y control de stock.</li>
-        <li>Búsquedas avanzadas y filtros.</li>
-        <li>Generación y exportación de reportes en Excel y Word.</li>
-      </ul>
+  <!-- ============================================================
+       EXPERIENCIA
+  ============================================================ -->
+  <section id="experiencia" aria-labelledby="experiencia-title">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title" id="experiencia-title">Experiencia <span>Profesional</span></h2>
+        <div class="section-divider" aria-hidden="true"></div>
+        <p class="section-subtitle">Prácticas profesionalizantes en empresa de software</p>
+      </div>
+
+      <article class="exp-card reveal reveal-delay-1" aria-label="Prácticas profesionalizantes">
+        <div class="exp-header">
+          <div>
+            <h3 class="exp-title">Desarrollador Web — Prácticas Profesionalizantes</h3>
+            <p class="exp-company">Empresa de Software · San Juan, Argentina</p>
+          </div>
+          <span class="exp-period">2025 — Actualidad</span>
+        </div>
+
+        <p class="exp-description">
+          Participación en el desarrollo de un sistema de gestión hospitalaria,
+          trabajando sobre funcionalidades reales, integrando con bases de datos
+          MySQL y aplicando arquitectura MVC con el framework CodeIgniter 3.
+        </p>
+
+        <ul class="exp-tasks" aria-label="Tareas realizadas">
+          <li>Desarrollo y mantenimiento del sistema</li>
+          <li>Login de usuarios con sesiones seguras</li>
+          <li>Implementación de roles (Administrador / Operario)</li>
+          <li>CRUD completo de pacientes</li>
+          <li>Gestión de medicamentos</li>
+          <li>Registro de dispensación de medicamentos</li>
+          <li>Ajuste y control de stock</li>
+          <li>Búsquedas avanzadas y filtros</li>
+          <li>Generación de reportes</li>
+          <li>Exportación a Excel y Word</li>
+          <li>Pruebas y corrección de errores</li>
+          <li>Trabajo en equipo</li>
+        </ul>
+
+        <div class="exp-tech" aria-label="Tecnologías utilizadas">
+          <span class="tech-tag">PHP</span>
+          <span class="tech-tag">CodeIgniter 3</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">MVC</span>
+          <span class="tech-tag">HTML5</span>
+          <span class="tech-tag">CSS3</span>
+        </div>
+      </article>
     </div>
-
-    <div class="proyecto">
-      <h3>Sistema de Carrito de Compras – Farmacia</h3>
-      <span>Proyecto académico · PHP · MySQL</span>
-      <p>
-        Aplicación web que permite visualizar productos, agregar y eliminar
-        artículos del carrito y calcular el total de la compra.
-        Incluye persistencia de datos y validaciones.
-      </p>
-    </div>
-
-    <div class="proyecto">
-      <h3>Sistema de Inscripción a Mesas de Examen</h3>
-      <span>Proyecto académico · PHP · MySQL</span>
-      <p>
-        Sistema web para la gestión de mesas de examen y materias,
-        con control de acceso por roles.
-        Implementación de operaciones CRUD completas para administradores.
-      </p>
-    </div>
-
   </section>
 
-  <footer id="contacto">
-    <h2>Contacto</h2>
-    <p>
-      📍 San Juan, Argentina <br>
-      📞 264 602 9529 <br>
-      📧 brunoolmos29@gmail.com <br>
-      📸 Instagram: @bruno_olmos29
-    </p>
+
+  <!-- ============================================================
+       TECNOLOGÍAS
+  ============================================================ -->
+  <section id="tecnologias" aria-labelledby="tecnologias-title">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title" id="tecnologias-title"><span>Tecnologías</span> que utilizo</h2>
+        <div class="section-divider" aria-hidden="true"></div>
+        <p class="section-subtitle">Stack técnico con el que trabajo actualmente</p>
+      </div>
+
+      <div class="tech-categories">
+
+        <!-- Backend -->
+        <div class="reveal reveal-delay-1">
+          <h3 class="tech-category-title">Backend</h3>
+          <div class="tech-grid">
+            <div class="tech-card">
+              <span class="tech-card-icon" aria-hidden="true">🐘</span>
+              <div class="tech-card-name">PHP</div>
+              <div class="tech-card-desc">Lenguaje principal de desarrollo</div>
+            </div>
+            <div class="tech-card">
+              <span class="tech-card-icon" aria-hidden="true">⚙️</span>
+              <div class="tech-card-name">CodeIgniter 3</div>
+              <div class="tech-card-desc">Framework MVC para PHP</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Base de datos -->
+        <div class="reveal reveal-delay-2">
+          <h3 class="tech-category-title">Base de datos</h3>
+          <div class="tech-grid">
+            <div class="tech-card">
+              <span class="tech-card-icon" aria-hidden="true">🗄️</span>
+              <div class="tech-card-name">MySQL</div>
+              <div class="tech-card-desc">Modelado y gestión de datos relacionales</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="reveal reveal-delay-3">
+          <h3 class="tech-category-title">Frontend</h3>
+          <div class="tech-grid">
+            <div class="tech-card">
+              <span class="tech-card-icon" aria-hidden="true">🌐</span>
+              <div class="tech-card-name">HTML5</div>
+              <div class="tech-card-desc">Estructura semántica de páginas web</div>
+            </div>
+            <div class="tech-card">
+              <span class="tech-card-icon" aria-hidden="true">🎨</span>
+              <div class="tech-card-name">CSS3</div>
+              <div class="tech-card-desc">Estilos, layouts y responsive design</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arquitectura -->
+        <div class="reveal reveal-delay-4">
+          <h3 class="tech-category-title">Arquitectura</h3>
+          <div class="tech-grid">
+            <div class="tech-card">
+              <span class="tech-card-icon" aria-hidden="true">🏗️</span>
+              <div class="tech-card-name">MVC</div>
+              <div class="tech-card-desc">Patrón Modelo-Vista-Controlador</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Herramientas -->
+        <div class="reveal reveal-delay-5">
+          <h3 class="tech-category-title">Herramientas</h3>
+          <div class="tech-grid">
+            <div class="tech-card">
+              <span class="tech-card-icon" aria-hidden="true">📊</span>
+              <div class="tech-card-name">Microsoft Excel</div>
+              <div class="tech-card-desc">Exportación de reportes</div>
+            </div>
+            <div class="tech-card">
+              <span class="tech-card-icon" aria-hidden="true">📝</span>
+              <div class="tech-card-name">Microsoft Word</div>
+              <div class="tech-card-desc">Generación de documentos</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROYECTOS
+  ============================================================ -->
+  <section id="proyectos" aria-labelledby="proyectos-title">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title" id="proyectos-title">Proyectos <span>Destacados</span></h2>
+        <div class="section-divider" aria-hidden="true"></div>
+        <p class="section-subtitle">Sistemas desarrollados durante prácticas y formación académica</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Proyecto 1: Sistema Hospitalario -->
+        <article class="project-card reveal reveal-delay-1" aria-label="Sistema Hospitalario">
+          <div class="project-card-top">
+            <span class="project-number" aria-hidden="true">01</span>
+            <span class="project-type-badge badge-professional">Prácticas profesionales</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Sistema Hospitalario</h3>
+            <p class="project-card-desc">
+              Sistema de gestión para entorno hospitalario y farmacia, desarrollado durante las prácticas
+              profesionalizantes. Permite administrar pacientes, medicamentos, stock y dispensaciones,
+              con control de acceso por roles y generación de reportes exportables.
+            </p>
+            <ul class="project-features" aria-label="Funcionalidades principales">
+              <li>Login seguro con gestión de sesiones</li>
+              <li>Roles: Administrador y Operario</li>
+              <li>CRUD completo de pacientes</li>
+              <li>Gestión y control de medicamentos</li>
+              <li>Registro de dispensación de medicamentos</li>
+              <li>Ajuste y control de stock</li>
+              <li>Búsquedas avanzadas con filtros</li>
+              <li>Exportación de reportes a Excel y Word</li>
+            </ul>
+            <div class="project-tech-tags" aria-label="Tecnologías">
+              <span class="project-tech-tag">PHP</span>
+              <span class="project-tech-tag">CodeIgniter 3</span>
+              <span class="project-tech-tag">MySQL</span>
+              <span class="project-tech-tag">MVC</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            Proyecto en entorno profesional real — código privado
+          </div>
+        </article>
+
+        <!-- Proyecto 2: Carrito de Compras -->
+        <article class="project-card reveal reveal-delay-2" aria-label="Sistema de Carrito de Compras">
+          <div class="project-card-top">
+            <span class="project-number" aria-hidden="true">02</span>
+            <span class="project-type-badge badge-academic">Proyecto académico</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Carrito de Compras — Farmacia</h3>
+            <p class="project-card-desc">
+              Aplicación web para gestión de un catálogo de productos de farmacia,
+              con funcionalidad completa de carrito de compras, persistencia de datos y validaciones.
+            </p>
+            <ul class="project-features" aria-label="Funcionalidades principales">
+              <li>Catálogo de productos con detalles</li>
+              <li>Agregar y eliminar artículos del carrito</li>
+              <li>Cálculo automático del total</li>
+              <li>Persistencia de datos entre sesiones</li>
+              <li>Validaciones de stock y formularios</li>
+            </ul>
+            <div class="project-tech-tags" aria-label="Tecnologías">
+              <span class="project-tech-tag">PHP</span>
+              <span class="project-tech-tag">MySQL</span>
+              <span class="project-tech-tag">HTML5</span>
+              <span class="project-tech-tag">CSS3</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            Proyecto académico — código privado
+          </div>
+        </article>
+
+        <!-- Proyecto 3: Mesas de Examen -->
+        <article class="project-card reveal reveal-delay-3" aria-label="Sistema de Inscripción a Mesas de Examen">
+          <div class="project-card-top">
+            <span class="project-number" aria-hidden="true">03</span>
+            <span class="project-type-badge badge-academic">Proyecto académico</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Inscripción a Mesas de Examen</h3>
+            <p class="project-card-desc">
+              Sistema web para la gestión de mesas de examen y materias en entorno educativo,
+              con control de acceso por roles y operaciones completas de administración.
+            </p>
+            <ul class="project-features" aria-label="Funcionalidades principales">
+              <li>Control de acceso con roles diferenciados</li>
+              <li>CRUD completo para administradores</li>
+              <li>Gestión de materias y comisiones</li>
+              <li>Inscripción y baja de alumnos en mesas</li>
+              <li>Listados y consultas del sistema</li>
+            </ul>
+            <div class="project-tech-tags" aria-label="Tecnologías">
+              <span class="project-tech-tag">PHP</span>
+              <span class="project-tech-tag">MySQL</span>
+              <span class="project-tech-tag">HTML5</span>
+              <span class="project-tech-tag">CSS3</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            Proyecto académico — código privado
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       EDUCACIÓN
+  ============================================================ -->
+  <section id="educacion" aria-labelledby="educacion-title">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title" id="educacion-title"><span>Educación</span></h2>
+        <div class="section-divider" aria-hidden="true"></div>
+        <p class="section-subtitle">Formación académica</p>
+      </div>
+
+      <div class="edu-grid">
+
+        <article class="edu-card featured reveal reveal-delay-1" aria-label="Tecnicatura Superior en Desarrollo de Software">
+          <span class="edu-icon" aria-hidden="true">🎓</span>
+          <h3 class="edu-degree">Tecnicatura Superior en Desarrollo de Software</h3>
+          <p class="edu-institution">Escuela Normal Superior General Manuel Belgrano</p>
+          <p class="edu-period">San Juan, Argentina · 2022 — Actualidad</p>
+          <span class="edu-status status-active">Último año · En curso</span>
+          <p class="edu-desc">
+            Carrera técnica superior con orientación en el diseño, desarrollo y mantenimiento de sistemas
+            de software. Incluye formación en bases de datos, arquitectura de software, desarrollo web,
+            algoritmos y prácticas profesionalizantes en empresa real.
+          </p>
+        </article>
+
+        <article class="edu-card reveal reveal-delay-2" aria-label="Educación secundaria">
+          <span class="edu-icon" aria-hidden="true">📚</span>
+          <h3 class="edu-degree">Educación Secundaria Completa</h3>
+          <p class="edu-institution">Escuela Normal Superior General Manuel Belgrano</p>
+          <p class="edu-period">San Juan, Argentina</p>
+          <span class="edu-status status-completed">Completada</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       HABILIDADES
+  ============================================================ -->
+  <section id="habilidades" aria-labelledby="habilidades-title">
+    <div class="container">
+      <div class="reveal">
+        <h2 class="section-title" id="habilidades-title">Habilidades <span>Profesionales</span></h2>
+        <div class="section-divider" aria-hidden="true"></div>
+        <p class="section-subtitle">Competencias que aplico en el trabajo diario</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal reveal-delay-1">
+          <span class="skill-icon" aria-hidden="true">🤝</span>
+          <div>
+            <div class="skill-name">Trabajo en equipo</div>
+            <div class="skill-desc">Participé en proyectos de desarrollo colaborativo, coordinando tareas con otros desarrolladores.</div>
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-delay-2">
+          <span class="skill-icon" aria-hidden="true">🔍</span>
+          <div>
+            <div class="skill-name">Resolución de problemas</div>
+            <div class="skill-desc">Capacidad para identificar la causa de errores en sistemas y proponer soluciones concretas.</div>
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-delay-3">
+          <span class="skill-icon" aria-hidden="true">📈</span>
+          <div>
+            <div class="skill-name">Aprendizaje continuo</div>
+            <div class="skill-desc">Adaptación constante a nuevas herramientas y tecnologías dentro del área de desarrollo.</div>
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-delay-4">
+          <span class="skill-icon" aria-hidden="true">✅</span>
+          <div>
+            <div class="skill-name">Responsabilidad</div>
+            <div class="skill-desc">Compromiso con los plazos, calidad del trabajo y buenas prácticas de desarrollo.</div>
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-delay-5">
+          <span class="skill-icon" aria-hidden="true">📋</span>
+          <div>
+            <div class="skill-name">Organización</div>
+            <div class="skill-desc">Gestión ordenada del código, documentación y tareas dentro de un proyecto de software.</div>
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-delay-1">
+          <span class="skill-icon" aria-hidden="true">💬</span>
+          <div>
+            <div class="skill-name">Comunicación efectiva</div>
+            <div class="skill-desc">Capacidad para comunicar avances, limitaciones y decisiones técnicas dentro del equipo.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACTO
+  ============================================================ -->
+  <section id="contacto" aria-labelledby="contacto-title">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="reveal">
+          <h2 class="section-title" id="contacto-title">¿Hablamos?</h2>
+          <div class="section-divider" style="margin: .6rem auto .8rem;" aria-hidden="true"></div>
+          <p class="section-subtitle" style="margin-bottom:1.5rem;">Contacto</p>
+          <p class="contact-intro">
+            Estoy disponible para oportunidades de práctica, trabajo junior o proyectos freelance.
+            Si querés contactarme, podés escribirme directamente por email o a través de Instagram.
+          </p>
+        </div>
+
+        <div class="contact-cards reveal reveal-delay-1">
+          <a href="mailto:brunoolmos29@gmail.com" class="contact-card" aria-label="Enviar email a brunoolmos29@gmail.com">
+            <span class="contact-card-icon" aria-hidden="true">📧</span>
+            <span class="contact-card-label">Email</span>
+            <span class="contact-card-value">brunoolmos29@gmail.com</span>
+          </a>
+          <a href="tel:+5492646029529" class="contact-card" aria-label="Llamar al 264 602 9529">
+            <span class="contact-card-icon" aria-hidden="true">📞</span>
+            <span class="contact-card-label">Teléfono</span>
+            <span class="contact-card-value">264 602 9529</span>
+          </a>
+          <a href="https://www.instagram.com/bruno_olmos29" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Instagram @bruno_olmos29">
+            <span class="contact-card-icon" aria-hidden="true">📸</span>
+            <span class="contact-card-label">Instagram</span>
+            <span class="contact-card-value">@bruno_olmos29</span>
+          </a>
+          <div class="contact-card" style="cursor:default;" aria-label="Ubicación San Juan, Argentina">
+            <span class="contact-card-icon" aria-hidden="true">📍</span>
+            <span class="contact-card-label">Ubicación</span>
+            <span class="contact-card-value">San Juan, Argentina</span>
+          </div>
+        </div>
+
+        <div class="contact-buttons reveal reveal-delay-2">
+          <a href="mailto:brunoolmos29@gmail.com" class="btn btn-primary" aria-label="Enviar email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Enviar email
+          </a>
+          <a href="https://www.instagram.com/bruno_olmos29" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Ver Instagram de Bruno Olmos">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Instagram
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Bruno<span>.</span> Olmos</div>
+          <div class="footer-sub">Estudiante de Desarrollo de Software · San Juan, Argentina</div>
+        </div>
+
+        <ul class="footer-links" role="list">
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <div class="footer-copy">
+          © <span id="current-year">2026</span> Bruno Olmos.<br>
+          Todos los derechos reservados.
+        </div>
+      </div>
+    </div>
   </footer>
 
+
+  <script src="js/script.js"></script>
 </body>
 </html>
-
-
