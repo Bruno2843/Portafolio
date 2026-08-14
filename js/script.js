@@ -94,23 +94,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const revealEls = document.querySelectorAll('.reveal');
 
 if ('IntersectionObserver' in window) {
+  // Primero ocultamos todos los elementos que NO están en el viewport inicial
+  revealEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    // Si el elemento está debajo del fold, lo ocultamos para animarlo
+    if (rect.top > window.innerHeight) {
+      el.classList.add('hidden');
+    }
+  });
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        entry.target.classList.remove('hidden');
         entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.08,
+    rootMargin: '0px 0px -30px 0px'
   });
 
-  revealEls.forEach(el => observer.observe(el));
-} else {
-  // fallback: show all immediately
-  revealEls.forEach(el => el.classList.add('visible'));
-}
+  revealEls.forEach(el => {
+    if (el.classList.contains('hidden')) {
+      observer.observe(el);
+    }
+  });
+} 
+// Si no hay IntersectionObserver, los elementos ya son visibles por defecto (no se ocultaron)
 
 
 /* ---------- TYPED EFFECT (hero subtitle) ---------- */

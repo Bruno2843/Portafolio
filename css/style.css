@@ -89,9 +89,14 @@ section {
 
 /* ---------- FADE-IN OBSERVER ---------- */
 .reveal {
+  opacity: 1;
+  transform: none;
+  transition: opacity .55s ease, transform .55s ease;
+}
+
+.reveal.hidden {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity .55s ease, transform .55s ease;
 }
 
 .reveal.visible {
@@ -221,12 +226,21 @@ section {
   gap: 2.5rem;
   z-index: 999;
   opacity: 0;
+  pointer-events: none;
   transition: opacity .3s ease;
 }
 
 .nav-mobile.open {
   display: flex;
   opacity: 1;
+  pointer-events: auto;
+}
+
+/* En desktop, el menú mobile nunca se muestra */
+@media (min-width: 769px) {
+  .nav-mobile {
+    display: none !important;
+  }
 }
 
 .nav-mobile a {
